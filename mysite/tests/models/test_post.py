@@ -26,3 +26,14 @@ def post_published2():
 @pytest.mark.django_db
 def test_create_published_post(post_published2):
     assert post_published2.title == 'teste'
+
+
+@pytest.fixture
+def post_published3():
+    return PostFactory(title='teste')
+
+
+@pytest.mark.django_db
+def test_create_published_post(post_published3):
+    assert post_published3.title == 'teste'
+# a
